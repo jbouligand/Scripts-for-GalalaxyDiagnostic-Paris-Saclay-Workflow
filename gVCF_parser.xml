@@ -1,0 +1,19 @@
+<tool id="gVCF_parser" name="gVCF parser" version="0.1.0">
+    <requirements>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command interpreter="python"><![CDATA[
+        gVCF_parser.py -i "$input1" -o "$output1"
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" format="vcf" />
+    </inputs>
+    <outputs>
+        <data name="output1" format="vcf" />
+    </outputs>
+    <help><![CDATA[
+        Keep relevant informations and lines containing variants, and format INFO column to display ANNOVAR and SnpEff annotations properly.
+    ]]></help>
+</tool>
