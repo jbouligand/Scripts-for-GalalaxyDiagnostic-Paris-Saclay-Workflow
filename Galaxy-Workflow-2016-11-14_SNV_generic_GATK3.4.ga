@@ -1,0 +1,2069 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "Workflow for variant calling", 
+    "format-version": "0.1", 
+    "name": "2016-11-14_SNV_generic_GATK3.4", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "fastq_R1"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 203, 
+                "top": 419
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"fastq_R1\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "6816d997-d596-4ebd-ba97-c36df2a8f52e", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "607cbf08-ee79-43c1-85a8-449f2c98211c"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "fastq_R2"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 203, 
+                "top": 502
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"fastq_R2\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "743c12ec-8284-4c71-8dfb-6d3eee24de52", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "4cdc4cdb-bf68-47ee-944b-7e29d0909f79"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "bedFile"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 203, 
+                "top": 587
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"bedFile\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "9c084d42-aa92-4d3b-ac49-47222958bcb6", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "ec9a16d0-19e6-4e88-8242-6d9f88c4815a"
+                }
+            ]
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Known Indel GATK"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 203, 
+                "top": 672
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Known Indel GATK\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "a868172b-aeb6-4171-93cc-0f50960c7a9c", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "dd270469-7e83-4bdc-89ba-f00da6517596"
+                }
+            ]
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 4, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Known SNP GATK"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 748
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Known SNP GATK\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "565826c5-bf8c-44d6-828c-b891c03fdfd5", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "a602a2e9-4d43-4f58-b644-4356a3f3151f"
+                }
+            ]
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 5, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "genome.len"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 202.25, 
+                "top": 821.25
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"genome.len\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "5e07335b-0989-4d42-8fd7-3330b11ce32e", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "06746938-8c6a-49b9-870c-8c6117f3eb74"
+                }
+            ]
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "id": 6, 
+            "input_connections": {
+                "input_file": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 433, 
+                "top": 417
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiontext_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "text_file"
+                }, 
+                "RenameDatasetActionhtml_file": {
+                    "action_arguments": {
+                        "newname": "#{input_file|basename}.html"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "html_file"
+                }, 
+                "RenameDatasetActiontext_file": {
+                    "action_arguments": {
+                        "newname": "#{input_file|basename}.txt"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "text_file"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
+            "tool_version": "0.63", 
+            "type": "tool", 
+            "uuid": "5665af09-23ab-4dae-9412-83da60e11141", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "html_file", 
+                    "uuid": "e4988780-c53f-4a80-81dc-b837f0b55a33"
+                }
+            ]
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/nilesh/sickle/sickle/1.0.0", 
+            "id": 7, 
+            "input_connections": {
+                "readtype|input_paired1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "readtype|input_paired2": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Sickle", 
+            "outputs": [
+                {
+                    "name": "output_single", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_paired1", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_paired2", 
+                    "type": "input"
+                }, 
+                {
+                    "name": "output_paired_single", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 433, 
+                "top": 628
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput_paired1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_paired1"
+                }, 
+                "HideDatasetActionoutput_paired2": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_paired2"
+                }, 
+                "HideDatasetActionoutput_paired_single": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_paired_single"
+                }, 
+                "HideDatasetActionoutput_single": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_single"
+                }, 
+                "RenameDatasetActionoutput_paired1": {
+                    "action_arguments": {
+                        "newname": "#{input_paired1|basename}.Fsickle.fastq"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output_paired1"
+                }, 
+                "RenameDatasetActionoutput_paired2": {
+                    "action_arguments": {
+                        "newname": "#{input_paired2|basename}.Rsickle.fastq"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output_paired2"
+                }, 
+                "RenameDatasetActionoutput_paired_single": {
+                    "action_arguments": {
+                        "newname": "#{input_paired1|basename}.Ssickle.fastq"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output_paired_single"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/sickle/sickle/1.0.0", 
+            "tool_state": "{\"__page__\": 0, \"length_threshold\": \"\\\"20\\\"\", \"no_five_prime\": \"\\\"False\\\"\", \"discard_n\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"readtype\": \"{\\\"single_or_paired\\\": \\\"pe\\\", \\\"input_paired1\\\": null, \\\"input_paired2\\\": null, \\\"__current_case__\\\": 1}\", \"qual_type\": \"\\\"sanger\\\"\", \"qual_threshold\": \"\\\"30\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "30506a0d-53a8-4033-adec-94e51cb0a2c9", 
+            "workflow_outputs": []
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "id": 8, 
+            "input_connections": {
+                "input_file": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 433, 
+                "top": 883
+            }, 
+            "post_job_actions": {
+                "HideDatasetActiontext_file": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "text_file"
+                }, 
+                "RenameDatasetActionhtml_file": {
+                    "action_arguments": {
+                        "newname": "#{input_file|basename}.html"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "html_file"
+                }, 
+                "RenameDatasetActiontext_file": {
+                    "action_arguments": {
+                        "newname": "#{input_file|basename}.txt"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "text_file"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
+            "tool_version": "0.63", 
+            "type": "tool", 
+            "uuid": "7c0986f9-b127-4422-92dd-0df643439ceb", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "html_file", 
+                    "uuid": "eea65fb7-9e52-47b9-b4b0-96d0eef9c2f1"
+                }
+            ]
+        }, 
+        "9": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_slopbed/2.22.0", 
+            "id": 9, 
+            "input_connections": {
+                "genome": {
+                    "id": 5, 
+                    "output_name": "output"
+                }, 
+                "inputA": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "SlopBed", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 433, 
+                "top": 1094
+            }, 
+            "post_job_actions": {
+                "ChangeDatatypeActionoutput": {
+                    "action_arguments": {
+                        "newtype": "interval"
+                    }, 
+                    "action_type": "ChangeDatatypeAction", 
+                    "output_name": "output"
+                }, 
+                "ColumnSetActionoutput": {
+                    "action_arguments": {
+                        "chromCol": "1", 
+                        "endCol": "3", 
+                        "nameCol": "5", 
+                        "startCol": "2", 
+                        "strandCol": "4"
+                    }, 
+                    "action_type": "ColumnSetAction", 
+                    "output_name": "output"
+                }, 
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_slopbed/2.22.0", 
+            "tool_state": "{\"__page__\": 0, \"addition\": \"{\\\"addition_select\\\": \\\"lr\\\", \\\"r\\\": \\\"-30\\\", \\\"l\\\": \\\"-30\\\", \\\"__current_case__\\\": 1}\", \"__rerun_remap_job_id__\": null, \"pct\": \"\\\"False\\\"\", \"header\": \"\\\"False\\\"\", \"inputA\": \"null\", \"genome\": \"null\", \"strand\": \"\\\"False\\\"\"}", 
+            "tool_version": "2.22.0", 
+            "type": "tool", 
+            "uuid": "33d989ed-0075-434c-99c5-49103c0fed6a", 
+            "workflow_outputs": []
+        }, 
+        "10": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.4.1", 
+            "id": 10, 
+            "input_connections": {
+                "fastq_input|fastq_input1": {
+                    "id": 7, 
+                    "output_name": "output_paired1"
+                }, 
+                "fastq_input|fastq_input2": {
+                    "id": 7, 
+                    "output_name": "output_paired2"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Map with BWA-MEM", 
+            "outputs": [
+                {
+                    "name": "bam_output", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 761, 
+                "top": 417
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionbam_output": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "bam_output"
+                }, 
+                "RenameDatasetActionbam_output": {
+                    "action_arguments": {
+                        "newname": "#{fastq_input1|basename}.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "bam_output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.4.1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"rg\": \"{\\\"rg_selector\\\": \\\"set_picard\\\", \\\"read_group_sm_conditional\\\": {\\\"do_auto_name\\\": \\\"False\\\", \\\"SM\\\": \\\"#{fastq_input1|basename}\\\", \\\"__current_case__\\\": 1}, \\\"CN\\\": \\\"\\\", \\\"PU\\\": \\\"MiSeq\\\", \\\"read_group_lb_conditional\\\": {\\\"do_auto_name\\\": \\\"False\\\", \\\"LB\\\": \\\"Sureselect\\\", \\\"__current_case__\\\": 1}, \\\"read_group_id_conditional\\\": {\\\"do_auto_name\\\": \\\"False\\\", \\\"ID\\\": \\\"BWA\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 0, \\\"DT\\\": \\\"\\\", \\\"PI\\\": \\\"\\\", \\\"DS\\\": \\\"\\\", \\\"PL\\\": \\\"ILLUMINA\\\"}\", \"fastq_input\": \"{\\\"iset_stats\\\": \\\"\\\", \\\"fastq_input2\\\": null, \\\"fastq_input_selector\\\": \\\"paired\\\", \\\"__current_case__\\\": 0, \\\"fastq_input1\\\": null}\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"illumina\\\", \\\"__current_case__\\\": 0}\", \"reference_source\": \"{\\\"ref_file\\\": \\\"hg19\\\", \\\"reference_source_selector\\\": \\\"cached\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "0.4.1", 
+            "type": "tool", 
+            "uuid": "ca709902-c672-4901-8e0e-013046e61867", 
+            "workflow_outputs": []
+        }, 
+        "11": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0", 
+            "id": 11, 
+            "input_connections": {
+                "input1": {
+                    "id": 10, 
+                    "output_name": "bam_output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Sort", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1017, 
+                "top": 417
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output1"
+                }, 
+                "RenameDatasetActionoutput1": {
+                    "action_arguments": {
+                        "newname": "#{input1|basename}_sort.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"sort_mode\": \"\\\"\\\"\"}", 
+            "tool_version": "2.0", 
+            "type": "tool", 
+            "uuid": "2aeb1beb-30dd-40b4-bca7-fe2de58f5e96", 
+            "workflow_outputs": []
+        }, 
+        "12": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/1.136.0", 
+            "id": 12, 
+            "input_connections": {
+                "inputFile": {
+                    "id": 11, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "MarkDuplicates", 
+            "outputs": [
+                {
+                    "name": "metrics_file", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outFile", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 1246, 
+                "top": 418
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "outFile"
+                }, 
+                "RenameDatasetActionmetrics_file": {
+                    "action_arguments": {
+                        "newname": "#{inputFile|basename}_metrics.txt"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "metrics_file"
+                }, 
+                "RenameDatasetActionoutFile": {
+                    "action_arguments": {
+                        "newname": "#{inputFile|basename}_MD.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "outFile"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/1.136.0", 
+            "tool_state": "{\"duplicate_scoring_strategy\": \"\\\"SUM_OF_BASE_QUALITIES\\\"\", \"remove_duplicates\": \"\\\"False\\\"\", \"read_name_regex\": \"\\\"[a-zA-Z0-9]+:[0-9]:([0-9]+):([0-9]+):([0-9]+).*.\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"optical_duplicate_pixel_distance\": \"\\\"100\\\"\", \"comments\": \"[]\", \"assume_sorted\": \"\\\"True\\\"\", \"validation_stringency\": \"\\\"LENIENT\\\"\", \"inputFile\": \"null\"}", 
+            "tool_version": "1.136.0", 
+            "type": "tool", 
+            "uuid": "d3bfa70f-d10b-45d5-a2ea-99fc401c870f", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "metrics_file", 
+                    "uuid": "2bcdda6a-d0ae-4a73-ae90-bf8d5540b5c2"
+                }
+            ]
+        }, 
+        "13": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "id": 13, 
+            "input_connections": {
+                "analysis_type|cond_bam_input|input": {
+                    "id": 12, 
+                    "output_name": "outFile"
+                }, 
+                "analysis_type|optional_parameters|rod_bindings_0|input_rod": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GATK", 
+            "outputs": [
+                {
+                    "name": "rtc_output_intervals", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "ir_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "br_table", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "ac_plotsReportFile", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "pr_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "hc_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "gg_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cg_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cv_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1540, 
+                "top": 334
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionac_plotsReportFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ac_plotsReportFile"
+                }, 
+                "HideDatasetActionbr_table": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "br_table"
+                }, 
+                "HideDatasetActioncg_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cg_output_vcf"
+                }, 
+                "HideDatasetActioncv_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cv_output_vcf"
+                }, 
+                "HideDatasetActiongg_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "gg_output_gvcf"
+                }, 
+                "HideDatasetActionhc_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "hc_output_gvcf"
+                }, 
+                "HideDatasetActionir_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ir_output_bam"
+                }, 
+                "HideDatasetActionoutput_log": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_log"
+                }, 
+                "HideDatasetActionpr_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pr_output_bam"
+                }, 
+                "HideDatasetActionrtc_output_intervals": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "rtc_output_intervals"
+                }, 
+                "RenameDatasetActionrtc_output_intervals": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_Interv.txt"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "rtc_output_intervals"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "tool_state": "{\"__page__\": 0, \"cond_threads\": \"{\\\"cond_threads_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"ref_file\": \"\\\"hg19\\\"\", \"__rerun_remap_job_id__\": null, \"cond_BQSR\": \"{\\\"cond_BQSR_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"RealignerTargetCreator\\\", \\\"optional_parameters\\\": {\\\"maxIntervalSize\\\": \\\"500\\\", \\\"minReadsAtLocus\\\": \\\"4\\\", \\\"optional_parameters_enabled\\\": \\\"True\\\", \\\"windowSize\\\": \\\"10\\\", \\\"mismatchFraction\\\": \\\"0.0\\\", \\\"rod_bindings\\\": [{\\\"__index__\\\": 0, \\\"input_rod\\\": null}], \\\"__current_case__\\\": 0}, \\\"cond_bam_input\\\": {\\\"input\\\": null, \\\"all_in_one\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 0}\", \"cond_intervals\": \"{\\\"intervals\\\": [{\\\"__index__\\\": 0, \\\"L\\\": \\\"\\\"}], \\\"cond_intervals_enabled\\\": \\\"True\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "3.4-0.d9", 
+            "type": "tool", 
+            "uuid": "4643cea5-5a52-4118-8216-4084f9620ee5", 
+            "workflow_outputs": []
+        }, 
+        "14": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "id": 14, 
+            "input_connections": {
+                "analysis_type|cond_bam_input|input": {
+                    "id": 12, 
+                    "output_name": "outFile"
+                }, 
+                "analysis_type|optional_parameters|knownAlleles_0|knownAllele": {
+                    "id": 3, 
+                    "output_name": "output"
+                }, 
+                "analysis_type|targetIntervals": {
+                    "id": 13, 
+                    "output_name": "rtc_output_intervals"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GATK", 
+            "outputs": [
+                {
+                    "name": "rtc_output_intervals", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "ir_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "br_table", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "ac_plotsReportFile", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "pr_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "hc_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "gg_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cg_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cv_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1844, 
+                "top": 346
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionac_plotsReportFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ac_plotsReportFile"
+                }, 
+                "HideDatasetActionbr_table": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "br_table"
+                }, 
+                "HideDatasetActioncg_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cg_output_vcf"
+                }, 
+                "HideDatasetActioncv_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cv_output_vcf"
+                }, 
+                "HideDatasetActiongg_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "gg_output_gvcf"
+                }, 
+                "HideDatasetActionhc_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "hc_output_gvcf"
+                }, 
+                "HideDatasetActionir_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ir_output_bam"
+                }, 
+                "HideDatasetActionoutput_log": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_log"
+                }, 
+                "HideDatasetActionpr_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pr_output_bam"
+                }, 
+                "HideDatasetActionrtc_output_intervals": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "rtc_output_intervals"
+                }, 
+                "RenameDatasetActionir_output_bam": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_IR.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "ir_output_bam"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "tool_state": "{\"__page__\": 0, \"cond_threads\": \"{\\\"cond_threads_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"ref_file\": \"\\\"hg19\\\"\", \"__rerun_remap_job_id__\": null, \"cond_BQSR\": \"{\\\"cond_BQSR_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"analysis_type\": \"{\\\"__current_case__\\\": 1, \\\"targetIntervals\\\": null, \\\"optional_parameters\\\": {\\\"optional_parameters_enabled\\\": \\\"True\\\", \\\"consensusDeterminationModel\\\": \\\"KNOWNS_ONLY\\\", \\\"knownAlleles\\\": [{\\\"__index__\\\": 0, \\\"knownAllele\\\": null}], \\\"__current_case__\\\": 0, \\\"LODThresholdForCleaning\\\": \\\"5.0\\\"}, \\\"analysis_type_selector\\\": \\\"IndelRealigner\\\", \\\"advanced_parameters\\\": {\\\"advanced_parameters_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"cond_bam_input\\\": {\\\"input\\\": null, \\\"all_in_one\\\": \\\"False\\\", \\\"__current_case__\\\": 1}}\", \"cond_intervals\": \"{\\\"cond_intervals_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "3.4-0.d9", 
+            "type": "tool", 
+            "uuid": "28ce2a68-f60d-4048-b445-c9e0d9c702d4", 
+            "workflow_outputs": []
+        }, 
+        "15": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "id": 15, 
+            "input_connections": {
+                "analysis_type|cond_bam_input|input": {
+                    "id": 14, 
+                    "output_name": "ir_output_bam"
+                }, 
+                "analysis_type|knownSites": {
+                    "id": 4, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GATK", 
+            "outputs": [
+                {
+                    "name": "rtc_output_intervals", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "ir_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "br_table", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "ac_plotsReportFile", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "pr_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "hc_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "gg_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cg_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cv_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2122, 
+                "top": 329
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionac_plotsReportFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ac_plotsReportFile"
+                }, 
+                "HideDatasetActionbr_table": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "br_table"
+                }, 
+                "HideDatasetActioncg_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cg_output_vcf"
+                }, 
+                "HideDatasetActioncv_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cv_output_vcf"
+                }, 
+                "HideDatasetActiongg_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "gg_output_gvcf"
+                }, 
+                "HideDatasetActionhc_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "hc_output_gvcf"
+                }, 
+                "HideDatasetActionir_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ir_output_bam"
+                }, 
+                "HideDatasetActionoutput_log": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_log"
+                }, 
+                "HideDatasetActionpr_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pr_output_bam"
+                }, 
+                "HideDatasetActionrtc_output_intervals": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "rtc_output_intervals"
+                }, 
+                "RenameDatasetActionbr_table": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_br.tab"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "br_table"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "tool_state": "{\"__page__\": 0, \"cond_threads\": \"{\\\"cond_threads_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"ref_file\": \"\\\"hg19\\\"\", \"__rerun_remap_job_id__\": null, \"cond_BQSR\": \"{\\\"cond_BQSR_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"BaseRecalibrator\\\", \\\"cond_bam_input\\\": {\\\"input\\\": null, \\\"all_in_one\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 2, \\\"knownSites\\\": null}\", \"cond_intervals\": \"{\\\"intervals\\\": [{\\\"__index__\\\": 0, \\\"L\\\": \\\"\\\"}], \\\"cond_intervals_enabled\\\": \\\"True\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "3.4-0.d9", 
+            "type": "tool", 
+            "uuid": "f03abcaa-41d7-46e7-84f3-2ef50ae4e505", 
+            "workflow_outputs": []
+        }, 
+        "16": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "id": 16, 
+            "input_connections": {
+                "analysis_type|cond_bam_input|input": {
+                    "id": 14, 
+                    "output_name": "ir_output_bam"
+                }, 
+                "cond_BQSR|BQSR": {
+                    "id": 15, 
+                    "output_name": "br_table"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GATK", 
+            "outputs": [
+                {
+                    "name": "rtc_output_intervals", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "ir_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "br_table", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "ac_plotsReportFile", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "pr_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "hc_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "gg_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cg_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cv_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2407, 
+                "top": 355
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionpr_output_bam": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_BR_PR.bam"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "pr_output_bam"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "tool_state": "{\"__page__\": 0, \"cond_threads\": \"{\\\"cond_threads_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"ref_file\": \"\\\"hg19\\\"\", \"__rerun_remap_job_id__\": null, \"cond_BQSR\": \"{\\\"cond_BQSR_enabled\\\": \\\"True\\\", \\\"BQSR\\\": null, \\\"__current_case__\\\": 0}\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"PrintReads\\\", \\\"optional_parameters\\\": {\\\"optional_parameters_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"cond_bam_input\\\": {\\\"input\\\": null, \\\"all_in_one\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 4}\", \"cond_intervals\": \"{\\\"cond_intervals_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "3.4-0.d9", 
+            "type": "tool", 
+            "uuid": "ac58717d-ced7-45af-8227-95a3f986ef18", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "ir_output_bam", 
+                    "uuid": "9c5de6ea-8c65-45ee-9b0f-82cf87e654c8"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "gg_output_gvcf", 
+                    "uuid": "6186b07a-4d22-4c4b-b260-3a3c983dc964"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "cv_output_vcf", 
+                    "uuid": "37e305ac-cae9-43b2-9c74-b3ac7c02a79c"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "br_table", 
+                    "uuid": "cffd5dc2-ccb4-485a-a343-620e9ee26000"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "hc_output_gvcf", 
+                    "uuid": "e41fc800-c8a9-402a-9ea0-b4495994cc84"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "cg_output_vcf", 
+                    "uuid": "7af930dc-eeb3-476c-a33b-fde08e5189bb"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "pr_output_bam", 
+                    "uuid": "d13708e7-10e1-4049-a36c-f38a688a8040"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "ac_plotsReportFile", 
+                    "uuid": "1bd00649-f02e-496a-94d1-2e0e191541d7"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "rtc_output_intervals", 
+                    "uuid": "4b853b41-50c8-4f8f-8b40-efcd7f420a98"
+                }, 
+                {
+                    "label": null, 
+                    "output_name": "output_log", 
+                    "uuid": "4a861529-b1a0-4712-bf4c-81a7bbb5dece"
+                }
+            ]
+        }, 
+        "17": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "id": 17, 
+            "input_connections": {
+                "analysis_type|cond_bam_input|input": {
+                    "id": 16, 
+                    "output_name": "pr_output_bam"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GATK", 
+            "outputs": [
+                {
+                    "name": "rtc_output_intervals", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "ir_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "br_table", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "ac_plotsReportFile", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "pr_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "hc_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "gg_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cg_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cv_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2680, 
+                "top": 357
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionac_plotsReportFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ac_plotsReportFile"
+                }, 
+                "HideDatasetActionbr_table": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "br_table"
+                }, 
+                "HideDatasetActioncg_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cg_output_vcf"
+                }, 
+                "HideDatasetActioncv_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cv_output_vcf"
+                }, 
+                "HideDatasetActiongg_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "gg_output_gvcf"
+                }, 
+                "HideDatasetActionhc_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "hc_output_gvcf"
+                }, 
+                "HideDatasetActionir_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ir_output_bam"
+                }, 
+                "HideDatasetActionoutput_log": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_log"
+                }, 
+                "HideDatasetActionpr_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pr_output_bam"
+                }, 
+                "HideDatasetActionrtc_output_intervals": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "rtc_output_intervals"
+                }, 
+                "RenameDatasetActionhc_output_gvcf": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_HC.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "hc_output_gvcf"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "tool_state": "{\"__page__\": 0, \"cond_threads\": \"{\\\"cond_threads_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"ref_file\": \"\\\"hg19\\\"\", \"__rerun_remap_job_id__\": null, \"cond_BQSR\": \"{\\\"cond_BQSR_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"analysis_type\": \"{\\\"__current_case__\\\": 5, \\\"cond_usage\\\": {\\\"emitRefConfidence\\\": \\\"GVCF\\\", \\\"__current_case__\\\": 0, \\\"cond_usage_selector\\\": \\\"GVCF\\\"}, \\\"optional_parameters\\\": {\\\"optional_parameters_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"analysis_type_selector\\\": \\\"HaplotypeCaller\\\", \\\"advanced_parameters\\\": {\\\"advanced_parameters_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"cond_bam_input\\\": {\\\"input\\\": null, \\\"all_in_one\\\": \\\"False\\\", \\\"__current_case__\\\": 1}}\", \"cond_intervals\": \"{\\\"intervals\\\": [{\\\"__index__\\\": 0, \\\"L\\\": \\\"\\\"}], \\\"cond_intervals_enabled\\\": \\\"True\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "3.4-0.d9", 
+            "type": "tool", 
+            "uuid": "feb53d3e-cf60-44fb-9b80-feff5a400425", 
+            "workflow_outputs": []
+        }, 
+        "18": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardHsMetrics/1.56.0", 
+            "id": 18, 
+            "input_connections": {
+                "bait_bed": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "input_file": {
+                    "id": 16, 
+                    "output_name": "pr_output_bam"
+                }, 
+                "target_bed": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "SAM/BAM Hybrid Selection Metrics", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 2758, 
+                "top": 802
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionhtml_file": {
+                    "action_arguments": {
+                        "newname": "#{input_file|basename}_PM.html"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "html_file"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/PicardHsMetrics/1.56.0", 
+            "tool_state": "{\"__page__\": 0, \"bait_bed\": \"null\", \"target_bed\": \"null\", \"__rerun_remap_job_id__\": null, \"input_file\": \"null\", \"out_prefix\": \"\\\"Picard HS Metrics\\\"\"}", 
+            "tool_version": "1.56.0", 
+            "type": "tool", 
+            "uuid": "dd45a7b7-224e-4bc4-87cf-39e02374ecce", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "html_file", 
+                    "uuid": "c9926f1a-2b52-429c-857c-efc60a3e5128"
+                }
+            ]
+        }, 
+        "19": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_coveragebed/2.22.1", 
+            "id": 19, 
+            "input_connections": {
+                "inputA": {
+                    "id": 16, 
+                    "output_name": "pr_output_bam"
+                }, 
+                "inputB": {
+                    "id": 9, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Compute both the depth and breadth of coverage", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "bed"
+                }
+            ], 
+            "position": {
+                "left": 2887, 
+                "top": 1025
+            }, 
+            "post_job_actions": {
+                "ColumnSetActionoutput": {
+                    "action_arguments": {
+                        "chromCol": "1", 
+                        "endCol": "3", 
+                        "nameCol": "4", 
+                        "startCol": "2", 
+                        "strandCol": "6"
+                    }, 
+                    "action_type": "ColumnSetAction", 
+                    "output_name": "output"
+                }, 
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }, 
+                "RenameDatasetActionoutput": {
+                    "action_arguments": {
+                        "newname": "#{inputA|basename}_count.bed"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_coveragebed/2.22.1", 
+            "tool_state": "{\"hist\": \"\\\"False\\\"\", \"d\": \"\\\"True\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"inputB\": \"null\", \"inputA\": \"null\", \"split\": \"\\\"False\\\"\", \"strandedness\": \"\\\"False\\\"\"}", 
+            "tool_version": "2.22.1", 
+            "type": "tool", 
+            "uuid": "c85f99e2-2433-4b73-af78-0cf86bd352a1", 
+            "workflow_outputs": []
+        }, 
+        "20": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "id": 20, 
+            "input_connections": {
+                "analysis_type|input": {
+                    "id": 17, 
+                    "output_name": "hc_output_gvcf"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GATK", 
+            "outputs": [
+                {
+                    "name": "rtc_output_intervals", 
+                    "type": "gatk_interval"
+                }, 
+                {
+                    "name": "ir_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "br_table", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "ac_plotsReportFile", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "pr_output_bam", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "hc_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "gg_output_gvcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cg_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "cv_output_vcf", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "output_log", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 2965, 
+                "top": 356
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionac_plotsReportFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ac_plotsReportFile"
+                }, 
+                "HideDatasetActionbr_table": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "br_table"
+                }, 
+                "HideDatasetActioncg_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cg_output_vcf"
+                }, 
+                "HideDatasetActioncv_output_vcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "cv_output_vcf"
+                }, 
+                "HideDatasetActiongg_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "gg_output_gvcf"
+                }, 
+                "HideDatasetActionhc_output_gvcf": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "hc_output_gvcf"
+                }, 
+                "HideDatasetActionir_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "ir_output_bam"
+                }, 
+                "HideDatasetActionoutput_log": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_log"
+                }, 
+                "HideDatasetActionpr_output_bam": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "pr_output_bam"
+                }, 
+                "HideDatasetActionrtc_output_intervals": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "rtc_output_intervals"
+                }, 
+                "RenameDatasetActiongg_output_gvcf": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_GG.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "gg_output_gvcf"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/avowinkel/gatk/gatk/3.4-0.d9", 
+            "tool_state": "{\"__page__\": 0, \"cond_threads\": \"{\\\"cond_threads_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"ref_file\": \"\\\"hg19\\\"\", \"__rerun_remap_job_id__\": null, \"cond_BQSR\": \"{\\\"cond_BQSR_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"GenotypeGVCFs\\\", \\\"optional_parameters\\\": {\\\"optional_parameters_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}, \\\"__current_case__\\\": 6, \\\"input\\\": null}\", \"cond_intervals\": \"{\\\"cond_intervals_enabled\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\"}", 
+            "tool_version": "3.4-0.d9", 
+            "type": "tool", 
+            "uuid": "b4d6def1-ce35-4d7c-a9b3-1c350a164455", 
+            "workflow_outputs": []
+        }, 
+        "21": {
+            "annotation": "", 
+            "content_id": "sort1", 
+            "id": 21, 
+            "input_connections": {
+                "input": {
+                    "id": 19, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Sort", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 3215, 
+                "top": 773
+            }, 
+            "post_job_actions": {
+                "ColumnSetActionout_file1": {
+                    "action_arguments": {
+                        "chromCol": "1", 
+                        "endCol": "3", 
+                        "nameCol": "4", 
+                        "startCol": "2", 
+                        "strandCol": "6"
+                    }, 
+                    "action_type": "ColumnSetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_sorted.bed"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "sort1", 
+            "tool_state": "{\"__page__\": 0, \"style\": \"\\\"gennum\\\"\", \"column\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"order\": \"\\\"ASC\\\"\", \"input\": \"null\", \"column_set\": \"[{\\\"other_order\\\": \\\"ASC\\\", \\\"__index__\\\": 0, \\\"other_column\\\": \\\"2\\\", \\\"other_style\\\": \\\"gennum\\\"}, {\\\"other_order\\\": \\\"ASC\\\", \\\"__index__\\\": 1, \\\"other_column\\\": \\\"7\\\", \\\"other_style\\\": \\\"gennum\\\"}]\"}", 
+            "tool_version": "1.0.3", 
+            "type": "tool", 
+            "uuid": "46888572-8c4c-4a4b-8988-464d61849391", 
+            "workflow_outputs": []
+        }, 
+        "22": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/table_annovar/table_annovar/0.2", 
+            "id": 22, 
+            "input_connections": {
+                "input": {
+                    "id": 20, 
+                    "output_name": "gg_output_gvcf"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "ANNOVAR Annotate VCF", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 3282, 
+                "top": 357
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }, 
+                "RenameDatasetActionoutput": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_annovar.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/table_annovar/table_annovar/0.2", 
+            "tool_state": "{\"out_format\": \"\\\"vcf\\\"\", \"__page__\": 0, \"gene_anns\": \"[\\\"refGene\\\"]\", \"__rerun_remap_job_id__\": null, \"regions\": \"null\", \"filters\": \"[\\\"popfreq_all_20150413,snp138,clinvar_20150629,ljb23_pp2hdiv,ljb23_pp2hvar\\\"]\", \"input\": \"null\"}", 
+            "tool_version": "0.2", 
+            "type": "tool", 
+            "uuid": "45e0ccc3-f185-4134-a925-b60bc5046091", 
+            "workflow_outputs": []
+        }, 
+        "23": {
+            "annotation": "", 
+            "content_id": "Filter1", 
+            "id": 23, 
+            "input_connections": {
+                "input": {
+                    "id": 21, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Filter", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 3533, 
+                "top": 530
+            }, 
+            "post_job_actions": {
+                "ColumnSetActionout_file1": {
+                    "action_arguments": {
+                        "chromCol": "1", 
+                        "endCol": "3", 
+                        "nameCol": "4", 
+                        "startCol": "2", 
+                        "strandCol": "6"
+                    }, 
+                    "action_type": "ColumnSetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_F20.bed"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Filter1", 
+            "tool_state": "{\"input\": \"null\", \"__rerun_remap_job_id__\": null, \"header_lines\": \"\\\"0\\\"\", \"cond\": \"\\\"c8<20\\\"\", \"__page__\": 0}", 
+            "tool_version": "1.1.0", 
+            "type": "tool", 
+            "uuid": "b23fe8c2-a026-48f9-8469-b9aef6b136c5", 
+            "workflow_outputs": []
+        }, 
+        "24": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.0.0", 
+            "id": 24, 
+            "input_connections": {
+                "input": {
+                    "id": 22, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "SnpEff", 
+            "outputs": [
+                {
+                    "name": "snpeff_output", 
+                    "type": "vcf"
+                }, 
+                {
+                    "name": "statsFile", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 3523.25, 
+                "top": 238.25
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionsnpeff_output": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "snpeff_output"
+                }, 
+                "HideDatasetActionstatsFile": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "statsFile"
+                }, 
+                "RenameDatasetActionsnpeff_output": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}_snpeff.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "snpeff_output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.0.0", 
+            "tool_state": "{\"spliceSiteSize\": \"\\\"9\\\"\", \"filter\": \"{\\\"specificEffects\\\": \\\"no\\\", \\\"__current_case__\\\": 0}\", \"filterOut\": \"null\", \"inputFormat\": \"\\\"vcf\\\"\", \"__page__\": 0, \"outputConditional\": \"{\\\"outputFormat\\\": \\\"vcf\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"udLength\": \"\\\"5000\\\"\", \"generate_stats\": \"\\\"True\\\"\", \"noLog\": \"\\\"True\\\"\", \"chr\": \"\\\"\\\"\", \"intervals\": \"null\", \"snpDb\": \"{\\\"extra_annotations\\\": null, \\\"regulation\\\": null, \\\"genomeVersion\\\": \\\"hg19\\\", \\\"genomeSrc\\\": \\\"cached\\\", \\\"__current_case__\\\": 0}\", \"offset\": \"\\\"default\\\"\", \"input\": \"null\", \"transcripts\": \"null\", \"annotations\": \"[\\\"-canon\\\", \\\"-hgvs\\\"]\"}", 
+            "tool_version": "4.0.0", 
+            "type": "tool", 
+            "uuid": "fff3ff75-3e28-4e5a-a8aa-82fbf26ad0ae", 
+            "workflow_outputs": []
+        }, 
+        "25": {
+            "annotation": "", 
+            "content_id": "Grouping1", 
+            "id": 25, 
+            "input_connections": {
+                "input1": {
+                    "id": 23, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Group", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 3815, 
+                "top": 557
+            }, 
+            "post_job_actions": {
+                "ColumnSetActionout_file1": {
+                    "action_arguments": {
+                        "chromCol": "3", 
+                        "endCol": "2", 
+                        "nameCol": "4", 
+                        "startCol": "1"
+                    }, 
+                    "action_type": "ColumnSetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "#{input1|basename}_group.bed"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Grouping1", 
+            "tool_state": "{\"operations\": \"[{\\\"opcol\\\": \\\"3\\\", \\\"__index__\\\": 0, \\\"optype\\\": \\\"cat_uniq\\\", \\\"opround\\\": \\\"no\\\"}, {\\\"opcol\\\": \\\"1\\\", \\\"__index__\\\": 1, \\\"optype\\\": \\\"cat_uniq\\\", \\\"opround\\\": \\\"no\\\"}, {\\\"opcol\\\": \\\"4\\\", \\\"__index__\\\": 2, \\\"optype\\\": \\\"cat_uniq\\\", \\\"opround\\\": \\\"no\\\"}]\", \"__page__\": 0, \"input1\": \"null\", \"ignorelines\": \"null\", \"groupcol\": \"\\\"2\\\"\", \"__rerun_remap_job_id__\": null, \"ignorecase\": \"\\\"False\\\"\"}", 
+            "tool_version": "2.1.0", 
+            "type": "tool", 
+            "uuid": "a09b2837-fc2f-4720-88d3-e126633258b3", 
+            "workflow_outputs": []
+        }, 
+        "26": {
+            "annotation": "", 
+            "content_id": "gVCF_parser", 
+            "id": 26, 
+            "input_connections": {
+                "input1": {
+                    "id": 24, 
+                    "output_name": "snpeff_output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "gVCF parser", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 3839.25, 
+                "top": 264.25
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output1"
+                }, 
+                "RenameDatasetActionoutput1": {
+                    "action_arguments": {
+                        "newname": "#{input1|basename}_p.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "gVCF_parser", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\"}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "135e089f-e656-4f7d-956c-c94b3cb925eb", 
+            "workflow_outputs": []
+        }, 
+        "27": {
+            "annotation": "", 
+            "content_id": "comp1", 
+            "id": 27, 
+            "input_connections": {
+                "input1": {
+                    "id": 9, 
+                    "output_name": "output"
+                }, 
+                "input2": {
+                    "id": 25, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Compare two Datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 4136, 
+                "top": 532
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "#{input2|basename}L20X.bed"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "comp1", 
+            "tool_state": "{\"input2\": \"null\", \"__page__\": 0, \"input1\": \"null\", \"field2\": \"\\\"1\\\"\", \"__rerun_remap_job_id__\": null, \"field1\": \"\\\"2\\\"\", \"mode\": \"\\\"N\\\"\"}", 
+            "tool_version": "1.0.2", 
+            "type": "tool", 
+            "uuid": "94eb9d44-638a-4a9e-a410-de8d5d025496", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "out_file1", 
+                    "uuid": "7e158da5-3050-4571-90d2-aa1b79b7d8f8"
+                }
+            ]
+        }, 
+        "28": {
+            "annotation": "", 
+            "content_id": "gVCF_order", 
+            "id": 28, 
+            "input_connections": {
+                "input1": {
+                    "id": 26, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "gVCF order", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 4087.25, 
+                "top": 263.25
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output1"
+                }, 
+                "RenameDatasetActionoutput1": {
+                    "action_arguments": {
+                        "newname": "#{input1|basename}_order.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "gVCF_order", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\"}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "1e60aea8-f18d-42ad-b545-23d9900e3360", 
+            "workflow_outputs": []
+        }, 
+        "29": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/devteam/vcfbedintersect/vcfbedintersect/0.0.3", 
+            "id": 29, 
+            "input_connections": {
+                "bed_vs_interval|bed_input": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "vcf_input": {
+                    "id": 28, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "VCF-BEDintersect:", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "vcf"
+                }
+            ], 
+            "position": {
+                "left": 4379, 
+                "top": 281
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "#{vcf_input|basename}_bed.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/vcfbedintersect/vcfbedintersect/0.0.3", 
+            "tool_state": "{\"bed_vs_interval\": \"{\\\"bed_vs_interval_selector\\\": \\\"bed\\\", \\\"bed_input\\\": null, \\\"__current_case__\\\": 0}\", \"__page__\": 0, \"invert\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"vcf_input\": \"null\"}", 
+            "tool_version": "0.0.3", 
+            "type": "tool", 
+            "uuid": "d4c1e977-fb63-4467-b384-67a428db9c22", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "out_file1", 
+                    "uuid": "80998047-4a57-4ef2-9665-19f7b677aeb7"
+                }
+            ]
+        }, 
+        "30": {
+            "annotation": "", 
+            "content_id": "Grep1", 
+            "id": 30, 
+            "input_connections": {
+                "input": {
+                    "id": 29, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Select", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 4608.25, 
+                "top": 305.25
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "#{input|basename}.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "Grep1", 
+            "tool_state": "{\"__page__\": 0, \"input\": \"null\", \"invert\": \"\\\"true\\\"\", \"__rerun_remap_job_id__\": null, \"pattern\": \"\\\"^##\\\"\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "uuid": "ecfaa636-0e81-4319-ad8d-ffd102fca703", 
+            "workflow_outputs": []
+        }, 
+        "31": {
+            "annotation": "", 
+            "content_id": "gVCF_filter_PopFreqMax", 
+            "id": 31, 
+            "input_connections": {
+                "tofilter": {
+                    "id": 30, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "gVCF filter PopFreqMax", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 4867.25, 
+                "top": 313.25
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionoutput": {
+                    "action_arguments": {
+                        "newname": "#{tofilter|basename}_F0.02.vcf"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_errors": null, 
+            "tool_id": "gVCF_filter_PopFreqMax", 
+            "tool_state": "{\"__page__\": 0, \"tofilter\": \"null\", \"__rerun_remap_job_id__\": null, \"seuil\": \"\\\"0.02\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "3969e1ba-dd3b-43be-8bf3-211783f65077", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "ad8f5e46-7108-4b72-bac5-45b26e461810"
+                }
+            ]
+        }
+    }, 
+    "uuid": "54ca1da2-6473-4292-9805-ed6ae42e44a1"
+}
