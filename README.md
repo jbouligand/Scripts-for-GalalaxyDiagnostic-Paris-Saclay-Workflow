@@ -19,4 +19,5 @@ They need to be installed in the “tools” directory of your local galaxy inst
 - gVCF_filt_freqmax
 
 Note : Python scripts are for python 2.7
+
 Author : Christophe Habib
