@@ -20,4 +20,4 @@ They need to be installed in the “tools” directory of your local galaxy inst
 
 Note : Python scripts are for python 2.7
 
-Author of these scripts : Christophe Habib, Bioinformaticien, email : christophe.habib@gmail.com
+Author of these scripts : Christophe Habib, Bioinformatician (2015-2018 in our lab - email : christophe.habib@gmail.com)
