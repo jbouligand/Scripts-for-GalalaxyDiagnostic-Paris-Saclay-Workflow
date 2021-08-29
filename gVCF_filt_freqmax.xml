@@ -1,0 +1,45 @@
+<tool id="gVCF_filter_PopFreqMax" name="gVCF filter PopFreqMax">
+
+  <configfiles>
+    <configfile name="script_R">
+    <![CDATA[
+data = read.csv("${tofilter}", header = T, sep = "\t",comment="")
+
+data\$PopFreqMax=paste(data\$PopFreqMax)
+data\$PopFreqMax[which(data\$PopFreqMax==".")]="0"
+data\$PopFreqMax=as.numeric(data\$PopFreqMax)
+
+indices = which(data\$PopFreqMax <= ${seuil})
+
+write.table(data[indices,],file = "${output}",row.names=FALSE,quote=FALSE,sep="\t")
+]]>
+    </configfile>
+  </configfiles>
+
+  <command interpreter="Rscript">
+	  $script_R
+  </command>
+
+  <inputs>
+	<param name="tofilter" format="vcf" type="data" label="Nom du fichier VCF a filtrer"/>
+	<param name="seuil" format="text" type="text" value = "0.02" label="Seuil pour le PopFreqMax"/>
+  </inputs>
+
+  <outputs>
+	<data format="tabular" name="output" label="Fichier VCF filtre"/>
+  </outputs>
+  <stdio>
+    <exit_code range=":-1" level="warning"/>
+    <exit_code range="1:" level="fatal"/>
+    <regex match="Error:" level="fatal"/>
+    <regex match="Exception:" level="fatal"/>
+    <regex match="EXception:" level="fatal"/>
+    <regex match="Traceback" level="fatal"/>
+  </stdio>
+
+  <help><![CDATA[
+  Filtre le VCF pour ne garder que les valeurs inférieures ou égale au seuil de PopFreqMax
+   ]]>
+  </help>
+</tool>
+
