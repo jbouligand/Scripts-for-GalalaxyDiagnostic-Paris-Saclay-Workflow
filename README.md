@@ -1,4 +1,4 @@
-# Scripts-for-GalalaxyDiagnostic-Paris-Saclay
+# Scripts-for-GalalaxyDiagnostic-Paris-Saclay-Worflow
 The generic galaxy workflow that we used for diagnosis “Galaxy-Workflow-2016-11-14_SNV_generic_GATK3.4.ga” can be uploaded in a local galaxy instance. To be operational, the workflow requires the installation of various galaxy tools: 
 1) from the galaxytoolshed:
 - FastQC Read Quality reports (Galaxy Version 0.63)
