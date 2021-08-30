@@ -12,7 +12,7 @@ The generic galaxy workflow that we used for diagnosis “Galaxy-Workflow-2016-1
 - SlopBed (Galaxy Version 2.22.0)
 - SAM/BAM Hybrid Selection Metrics for targeted resequencing data (Galaxy Version 1.56.0)
 - Compute both the depth and breadth of coverage of features in file A across the features in file B (coverageBed) (Galaxy Version 2.22.1)
-2) 3 additional scripts provided as supplemental material.
+2) 3 additional scripts provided as supplementary material.
 They need to be installed in the “tools” directory of your local galaxy instance. 
 - gVCF_parser
 - gVCF_order
